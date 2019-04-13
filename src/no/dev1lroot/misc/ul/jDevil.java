@@ -1,4 +1,4 @@
-package com.dev1lroot.misc.ui;
+package no.dev1lroot.misc.ui;
 
 import javax.swing.*;
 import java.net.URL;
