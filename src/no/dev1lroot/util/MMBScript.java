@@ -1,9 +1,10 @@
 package no.dev1lroot.util;
 
 import java.io.*;
+import no.dev1lroot.lib.Colors;
 
 // Pocket implementering av MMBScript
-public class mmbscript {
+public class MMBScript {
 
     // Returnerer all tekstdata fra filen
     public static String StrFromFile(String fileName) {
@@ -19,10 +20,10 @@ public class mmbscript {
             bufferedReader.close();
             return lines;
         } catch (FileNotFoundException ex) {
-            String error = "\u001b[31mUnable to open file '" + fileName + "'";
+            String error = Colors.fgColor.Red+"Unable to open file '" + fileName + "'";
             return error;
         } catch (IOException ex) {
-            String error = "\u001b[31mError reading file '" + fileName + "'";
+            String error = Colors.fgColor.Red+"Error reading file '" + fileName + "'";
             return error;
         }
         
